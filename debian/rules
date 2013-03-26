@@ -16,7 +16,8 @@ override_dh_autoreconf:
 
 override_dh_auto_configure:
 	dh_auto_configure -- --enable-vala --enable-eds-backend \
-		--enable-import-tool --enable-inspect-tool
+		--enable-import-tool --enable-inspect-tool \
+		--disable-ofono-backend
 
 override_dh_strip:
 	dh_strip -plibfolks25 --dbg-package=libfolks-dbg

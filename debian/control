@@ -1,7 +1,6 @@
 Source: folks
 Priority: optional
-Maintainer: BlankOn Developer <blankon-dev@googlegroups.com>
-XSBC-Original-Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth.debian.org>
+Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth.debian.org>
 Uploaders: Laurent Bigonville <bigon@debian.org>,
            Sjoerd Simons <sjoerd@debian.org>,
            Emilio Pozuelo Monfort <pochu@debian.org>
@@ -17,12 +16,13 @@ Build-Depends: debhelper (>= 7.0.50~),
                gobject-introspection (>= 1.31.0-2~),
                libgirepository1.0-dev (>= 1.30),
                gir1.2-telepathyglib-0.12,
-               libgee-dev (>= 0.6.1-3~),
+               libgee-0.8-dev (>= 0.8.4),
                libxml2-dev,
                libncurses5-dev,
                libreadline6-dev,
-               libebook1.2-dev (>= 3.5.3),
-               libedataserver1.2-dev (>= 3.5.3.1),
+               libebook1.2-dev (>= 3.7.90),
+               libedataserver1.2-dev (>= 3.7.90),
+               libebook-contacts1.2-dev (>= 3.7.90),
                libzeitgeist-dev (>= 0.3.14)
 Standards-Version: 3.9.3
 Section: libs
@@ -48,7 +48,7 @@ Architecture: any
 Depends: libfolks25 (= ${binary:Version}),
          gir1.2-folks-0.6 (= ${binary:Version}),
          libglib2.0-dev (>= 2.32.0),
-         libgee-dev (>= 0.6.1-3~),
+         libgee-0.8-dev
          ${misc:Depends}
 Description: library to aggregates people into metacontact - development files
  libfolks is a library that aggregates people from multiple sources

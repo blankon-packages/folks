@@ -1,3 +1,26 @@
+folks (0.9.1-2blankon1) suroboyo; urgency=low
+
+  * New upstream release
+
+ -- Mahyuddin Idram Ahmad <dotovr@di.blankon.in>  Tue, 26 Mar 2013 16:42:08 +0700
+
+folks (0.9.1-2) experimental; urgency=low
+
+  * debian/libfolks-eds25.symbols
+    debian/libfolks25.symbols: Remove debian version from symbols file
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Sat, 23 Mar 2013 21:14:46 +0100
+
+folks (0.9.1-1) experimental; urgency=low
+
+  * New upstream release
+  * debian/control: Bump gee and e-d-s build-depends
+  * debian/libfolks25.symbols: Updated
+  * debian/libfolks-eds25.symbols: Updated
+  * debian/control: Fix libfolks-dev depends on libgee for the new name
+
+ -- Sjoerd Simons <sjoerd@debian.org>  Fri, 15 Mar 2013 23:04:50 +0100
+
 folks (0.8.0-2blankon1) suroboyo; urgency=low
 
   * Upload to suroboyo 

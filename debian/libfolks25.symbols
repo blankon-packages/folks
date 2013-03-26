@@ -6,6 +6,7 @@ libfolks.so.25 libfolks25 #MINVER#
  folks_abstract_field_details_add_parameter@Base 0.6.0
  folks_abstract_field_details_construct@Base 0.6.0
  folks_abstract_field_details_equal@Base 0.6.0
+ folks_abstract_field_details_equal_static@Base 0.9.1
  folks_abstract_field_details_extend_parameters@Base 0.6.0
  folks_abstract_field_details_get_id@Base 0.6.5
  folks_abstract_field_details_get_parameter_values@Base 0.6.0
@@ -14,6 +15,7 @@ libfolks.so.25 libfolks25 #MINVER#
  folks_abstract_field_details_get_value@Base 0.6.0
  folks_abstract_field_details_get_value_type@Base 0.6.5
  folks_abstract_field_details_hash@Base 0.6.0
+ folks_abstract_field_details_hash_static@Base 0.9.1
  folks_abstract_field_details_parameters_equal@Base 0.6.5
  folks_abstract_field_details_remove_parameter_all@Base 0.6.0
  folks_abstract_field_details_set_id@Base 0.6.5
@@ -51,6 +53,8 @@ libfolks.so.25 libfolks25 #MINVER#
  folks_avatar_details_get_type@Base 0.6.0
  folks_avatar_details_set_avatar@Base 0.6.0
  folks_backend_construct@Base 0.6.0
+ folks_backend_disable_persona_store@Base 0.9.1
+ folks_backend_enable_persona_store@Base 0.9.1
  folks_backend_get_is_prepared@Base 0.6.0
  folks_backend_get_is_quiescent@Base 0.6.2
  folks_backend_get_name@Base 0.6.0
@@ -58,6 +62,7 @@ libfolks.so.25 libfolks25 #MINVER#
  folks_backend_get_type@Base 0.6.0
  folks_backend_prepare@Base 0.6.0
  folks_backend_prepare_finish@Base 0.6.0
+ folks_backend_set_persona_stores@Base 0.9.1
  folks_backend_store_KEY_FILE_GROUP_ALL_OTHERS@Base 0.6.0
  folks_backend_store_add_backend@Base 0.6.0
  folks_backend_store_disable_backend@Base 0.6.0
@@ -138,6 +143,7 @@ libfolks.so.25 libfolks25 #MINVER#
  folks_individual_aggregator_add_persona_from_details@Base 0.6.0
  folks_individual_aggregator_add_persona_from_details_finish@Base 0.6.0
  folks_individual_aggregator_construct@Base 0.6.0
+ folks_individual_aggregator_construct_with_backend_store@Base 0.9.1
  folks_individual_aggregator_ensure_individual_property_writeable@Base 0.6.2
  folks_individual_aggregator_ensure_individual_property_writeable_finish@Base 0.6.2
  folks_individual_aggregator_error_quark@Base 0.6.0
@@ -154,6 +160,7 @@ libfolks.so.25 libfolks25 #MINVER#
  folks_individual_aggregator_look_up_individual@Base 0.7.2.2
  folks_individual_aggregator_look_up_individual_finish@Base 0.7.2.2
  folks_individual_aggregator_new@Base 0.6.0
+ folks_individual_aggregator_new_with_backend_store@Base 0.9.1
  folks_individual_aggregator_prepare@Base 0.6.0
  folks_individual_aggregator_prepare_finish@Base 0.6.0
  folks_individual_aggregator_remove_individual@Base 0.6.0
@@ -182,7 +189,6 @@ libfolks.so.25 libfolks25 #MINVER#
  folks_interaction_details_get_type@Base 0.7.2.2
  folks_internal_equal_sets@Base 0.6.4.1
  folks_internal_profiling_end@Base 0.7.2.2
- folks_internal_profiling_markv@Base 0.8.0
  folks_internal_profiling_point@Base 0.7.2.2
  folks_internal_profiling_start@Base 0.7.2.2
  folks_local_id_details_change_local_ids@Base 0.6.2
