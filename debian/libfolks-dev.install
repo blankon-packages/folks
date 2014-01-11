@@ -1,5 +1,5 @@
-usr/lib/libfolks.so
+usr/lib/*/libfolks.so
 usr/include/folks/folks.h
-usr/lib/pkgconfig/folks.pc
+usr/lib/*/pkgconfig/folks.pc
 usr/share/vala/vapi/folks.*
-usr/share/gir-1.0/Folks-0.6.gir
+usr/share/gir-1.0/*.gir

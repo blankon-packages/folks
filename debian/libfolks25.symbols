@@ -2,6 +2,7 @@ libfolks.so.25 libfolks25 #MINVER#
  _folks_debug_register_domain@Base 0.6.0
  _folks_persona_store_emit_personas_changed@Base 0.6.0
  _folks_phone_field_details_drop_extension@Base 0.6.0
+ _folks_small_set_new_take_array@Base 0.9.2
  _folks_utils_str_equal_safe@Base 0.6.0
  folks_abstract_field_details_add_parameter@Base 0.6.0
  folks_abstract_field_details_construct@Base 0.6.0
@@ -144,6 +145,8 @@ libfolks.so.25 libfolks25 #MINVER#
  folks_individual_aggregator_add_persona_from_details_finish@Base 0.6.0
  folks_individual_aggregator_construct@Base 0.6.0
  folks_individual_aggregator_construct_with_backend_store@Base 0.9.1
+ folks_individual_aggregator_dup@Base 0.9.5
+ folks_individual_aggregator_dup_with_backend_store@Base 0.9.5
  folks_individual_aggregator_ensure_individual_property_writeable@Base 0.6.2
  folks_individual_aggregator_ensure_individual_property_writeable_finish@Base 0.6.2
  folks_individual_aggregator_error_quark@Base 0.6.0
@@ -189,6 +192,7 @@ libfolks.so.25 libfolks25 #MINVER#
  folks_interaction_details_get_type@Base 0.7.2.2
  folks_internal_equal_sets@Base 0.6.4.1
  folks_internal_profiling_end@Base 0.7.2.2
+ folks_internal_profiling_markv@Base 0.9.6
  folks_internal_profiling_point@Base 0.7.2.2
  folks_internal_profiling_start@Base 0.7.2.2
  folks_local_id_details_change_local_ids@Base 0.6.2
@@ -196,6 +200,16 @@ libfolks.so.25 libfolks25 #MINVER#
  folks_local_id_details_get_local_ids@Base 0.6.0
  folks_local_id_details_get_type@Base 0.6.0
  folks_local_id_details_set_local_ids@Base 0.6.0
+ folks_location_construct@Base 0.9.2
+ folks_location_details_change_location@Base 0.9.2
+ folks_location_details_change_location_finish@Base 0.9.2
+ folks_location_details_get_location@Base 0.9.2
+ folks_location_details_get_type@Base 0.9.2
+ folks_location_details_set_location@Base 0.9.2
+ folks_location_equal@Base 0.9.2
+ folks_location_equal_coordinates@Base 0.9.2
+ folks_location_get_type@Base 0.9.2
+ folks_location_new@Base 0.9.2
  folks_match_result_get_type@Base 0.6.0
  folks_maybe_bool_get_type@Base 0.6.0
  folks_name_details_change_full_name@Base 0.6.2
@@ -328,12 +342,14 @@ libfolks.so.25 libfolks25 #MINVER#
  folks_potential_match_known_email_aliases@Base 0.6.0
  folks_potential_match_new@Base 0.6.0
  folks_potential_match_potential_match@Base 0.6.0
+ folks_presence_details_get_client_types@Base 0.9.5
  folks_presence_details_get_default_message_from_type@Base 0.7.2.2
  folks_presence_details_get_presence_message@Base 0.6.0
  folks_presence_details_get_presence_status@Base 0.6.0
  folks_presence_details_get_presence_type@Base 0.6.0
  folks_presence_details_get_type@Base 0.6.0
  folks_presence_details_is_online@Base 0.6.0
+ folks_presence_details_set_client_types@Base 0.9.5
  folks_presence_details_set_presence_message@Base 0.6.0
  folks_presence_details_set_presence_status@Base 0.6.0
  folks_presence_details_set_presence_type@Base 0.6.0
@@ -363,6 +379,11 @@ libfolks.so.25 libfolks25 #MINVER#
  folks_role_set_title@Base 0.6.0
  folks_role_set_uid@Base 0.6.0
  folks_role_to_string@Base 0.6.0
+ folks_small_set_copy@Base 0.9.2
+ folks_small_set_empty@Base 0.9.2
+ folks_small_set_get_type@Base 0.9.2
+ folks_small_set_iterator_get_type@Base 0.9.2
+ folks_small_set_new@Base 0.9.2
  folks_structured_name_construct@Base 0.6.0
  folks_structured_name_construct_simple@Base 0.6.0
  folks_structured_name_equal@Base 0.6.0

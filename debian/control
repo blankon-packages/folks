@@ -4,15 +4,14 @@ Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth
 Uploaders: Laurent Bigonville <bigon@debian.org>,
            Sjoerd Simons <sjoerd@debian.org>,
            Emilio Pozuelo Monfort <pochu@debian.org>
-Build-Depends: debhelper (>= 7.0.50~),
+Build-Depends: debhelper (>= 9),
                dh-autoreconf (>= 4),
                autotools-dev,
                intltool (>= 0.50),
-               libglib2.0-dev (>= 2.32.0),
+               libglib2.0-dev (>= 2.38.2),
                libtelepathy-glib-dev (>= 0.19),
                libdbus-glib-1-dev,
-               valac-0.18 (>= 0.17.6) | valac (>= 0.17.6),
-               libvala-0.18-dev (>= 0.17.6),
+               valac (>= 0.22),
                gobject-introspection (>= 1.31.0-2~),
                libgirepository1.0-dev (>= 1.30),
                gir1.2-telepathyglib-0.12,
@@ -20,15 +19,15 @@ Build-Depends: debhelper (>= 7.0.50~),
                libxml2-dev,
                libncurses5-dev,
                libreadline6-dev,
-               libebook1.2-dev (>= 3.7.90),
+               libebook1.2-dev (>= 3.9.1),
                libedataserver1.2-dev (>= 3.7.90),
-               libebook-contacts1.2-dev (>= 3.7.90),
-               libzeitgeist-dev (>= 0.3.14)
-Standards-Version: 3.9.3
+               libebook-contacts1.2-dev (>= 3.9.1),
+               libzeitgeist-2.0-dev (>= 0.9.14)
+Standards-Version: 3.9.5
 Section: libs
-Homepage: http://telepathy.freedesktop.org/wiki/Folks
-Vcs-Git: git://git.debian.org/git/pkg-telepathy/folks.git
-Vcs-Browser: http://git.debian.org/?p=pkg-telepathy/folks.git;a=summary
+Homepage: https://wiki.gnome.org/Projects/Folks
+Vcs-Git: git://anonscm.debian.org/pkg-telepathy/folks.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-telepathy/folks.git;a=summary
 
 Package: libfolks25
 Architecture: any
@@ -37,6 +36,8 @@ Depends: ${shlibs:Depends},
          folks-common (= ${source:Version})
 Recommends: libfolks-eds25,
 Breaks: libfolks-eds25 (<< 0.8.0-2~), libfolks-telepathy25 (<< 0.8.0-2~)
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
 Description: library to aggregates people into metacontacts
  libfolks is a library that aggregates people from multiple sources
  (eg, Telepathy connection managers and eventually evolution data server,
@@ -48,7 +49,7 @@ Architecture: any
 Depends: libfolks25 (= ${binary:Version}),
          gir1.2-folks-0.6 (= ${binary:Version}),
          libglib2.0-dev (>= 2.32.0),
-         libgee-0.8-dev
+         libgee-0.8-dev,
          ${misc:Depends}
 Description: library to aggregates people into metacontact - development files
  libfolks is a library that aggregates people from multiple sources
@@ -63,6 +64,7 @@ Priority: extra
 Architecture: any
 Depends: libfolks25 (= ${binary:Version}),
          ${misc:Depends}
+Multi-Arch: same
 Description: library to aggregates people into metacontact - debugging symbols
  libfolks is a library that aggregates people from multiple sources
  (eg, Telepathy connection managers and eventually evolution data server,
@@ -73,6 +75,7 @@ Description: library to aggregates people into metacontact - debugging symbols
 Package: folks-common
 Architecture: all
 Depends: ${misc:Depends}
+Multi-Arch: foreign
 Description: library to aggregates people into metacontacts (common files)
  libfolks is a library that aggregates people from multiple sources
  (eg, Telepathy connection managers and eventually evolution data server,
@@ -100,6 +103,8 @@ Depends: ${shlibs:Depends},
          ${misc:Depends},
          libfolks25 (= ${binary:Version})
 Recommends: folks-common (= ${source:Version})
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
 Description: Telepathy backend for libfolks
  libfolks is a library that aggregates people from multiple sources
  (eg, Telepathy connection managers and eventually evolution data server,
@@ -129,6 +134,8 @@ Depends: ${shlibs:Depends},
          libfolks25 (= ${binary:Version}),
          evolution-data-server (>= 3.2.0)
 Recommends: folks-common (= ${source:Version})
+Pre-Depends: ${misc:Pre-Depends}
+Multi-Arch: same
 Description: Evolution-data-server backend for libfolks
  libfolks is a library that aggregates people from multiple sources
  (eg, Telepathy connection managers and eventually evolution data server,
@@ -158,6 +165,7 @@ Priority: extra
 Architecture: any
 Depends: libfolks-eds25 (= ${binary:Version}),
          ${misc:Depends}
+Multi-Arch: same
 Description: Evolution-data-server backend for libfolks - debugging symbols
  libfolks is a library that aggregates people from multiple sources
  (eg, Telepathy connection managers and eventually evolution data server,
@@ -171,6 +179,7 @@ Priority: extra
 Architecture: any
 Depends: libfolks-telepathy25 (= ${binary:Version}),
          ${misc:Depends}
+Multi-Arch: same
 Description: Telepathy backend for libfolks - debugging symbols
  libfolks is a library that aggregates people from multiple sources
  (eg, Telepathy connection managers and eventually evolution data server,

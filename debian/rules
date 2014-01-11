@@ -6,7 +6,7 @@
 
 # Ensure at build time that the library has no dependencies on undefined
 # symbols, and speed up loading.
-export LDFLAGS += -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
+export DEB_LDFLAGS_MAINT_APPEND = -Wl,-z,defs -Wl,-O1 -Wl,--as-needed
 
 %:
 	dh $@ --with autoreconf --with gir
@@ -16,8 +16,8 @@ override_dh_autoreconf:
 
 override_dh_auto_configure:
 	dh_auto_configure -- --enable-vala --enable-eds-backend \
-		--enable-import-tool --enable-inspect-tool \
-		--disable-ofono-backend
+		--enable-import-tool --enable-inspect-tool --enable-zeitgeist \
+		--disable-ofono-backend --disable-bluez-backend
 
 override_dh_strip:
 	dh_strip -plibfolks25 --dbg-package=libfolks-dbg
