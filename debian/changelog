@@ -2,7 +2,7 @@ folks (0.9.6-3blankon1) tambora; urgency=low
 
   * BUMP libebook1.2-dev (>= 3.12.0), libedataserver1.2-dev (>= 3.12.0), libebook-contacts1.2-dev (>= 3.12.0), (Valac => 0.23) 
 
- -- Aan Yustian <aftian@localhost>  Mon, 07 Apr 2014 16:59:08 +0700
+ -- Aan Yustian <yustian.aan@gmail.com>  Mon, 07 Apr 2014 16:59:08 +0700
 
 folks (0.9.6-3) unstable; urgency=medium
 
