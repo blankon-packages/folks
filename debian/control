@@ -1,6 +1,7 @@
 Source: folks
 Priority: optional
-Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth.debian.org>
+Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
+XSBC-original-Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth.debian.org>
 Uploaders: Laurent Bigonville <bigon@debian.org>,
            Sjoerd Simons <sjoerd@debian.org>,
            Emilio Pozuelo Monfort <pochu@debian.org>
@@ -11,7 +12,7 @@ Build-Depends: debhelper (>= 9),
                libglib2.0-dev (>= 2.38.2),
                libtelepathy-glib-dev (>= 0.19),
                libdbus-glib-1-dev,
-               valac (>= 0.22),
+               valac (>= 0.23),
                gobject-introspection (>= 1.31.0-2~),
                libgirepository1.0-dev (>= 1.30),
                gir1.2-telepathyglib-0.12,
@@ -19,9 +20,9 @@ Build-Depends: debhelper (>= 9),
                libxml2-dev,
                libncurses5-dev,
                libreadline6-dev,
-               libebook1.2-dev (>= 3.9.1),
-               libedataserver1.2-dev (>= 3.7.90),
-               libebook-contacts1.2-dev (>= 3.9.1),
+               libebook1.2-dev (>= 3.12.0),
+               libedataserver1.2-dev (>= 3.12.0),
+               libebook-contacts1.2-dev (>= 3.12.0),
                libzeitgeist-2.0-dev (>= 0.9.14)
 Standards-Version: 3.9.5
 Section: libs

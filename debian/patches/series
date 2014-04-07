@@ -1,0 +1,4 @@
+0001-Reduce-libebook-dependency-when-not-compiling-the-Bl.patch
+0002-Fixed-EDS-persona-store-display-name-value.patch
+0003-Replaced-use-of-EVCard.remove_attribute-to-EVCard.re.patch
+0001-backends-Fix-calls-to-ImDetails.normalise_im_address.patch

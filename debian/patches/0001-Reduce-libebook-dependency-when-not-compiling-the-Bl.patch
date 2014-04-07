@@ -1,0 +1,38 @@
+From: Simon McVittie <simon.mcvittie@collabora.co.uk>
+Date: Mon, 24 Mar 2014 09:45:01 +0000
+Subject: Reduce libebook dependency when not compiling the BlueZ backend
+
+Debian unstable is currently stuck with Evolution 3.8, due to the
+number of ABI transitions required to get from here to there. Folks
+does not appear to need a newer version if the optional BlueZ backend
+is not installed, and Debian doesn't currently enable that backend
+anyway.
+
+Bug: https://bugzilla.gnome.org/show_bug.cgi?id=726980
+---
+ configure.ac | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+diff --git a/configure.ac b/configure.ac
+index cfadede..79c54fe 100644
+--- a/configure.ac
++++ b/configure.ac
+@@ -202,7 +202,8 @@ VALA_REQUIRED=0.22.0.28-9090
+ VALADOC_REQUIRED=0.3.1
+ TRACKER_SPARQL_MAJOR=0.16
+ TRACKER_SPARQL_REQUIRED=0.15.2
+-EBOOK_REQUIRED=3.9.1
++EBOOK_REQUIRED=3.8
++EBOOK_REQUIRED_FOR_BLUEZ=3.9.1
+ EDATASERVER_REQUIRED=3.5.3.1
+ ZEITGEIST_REQUIRED=0.9.14
+ GEE_REQUIRED=0.8.4
+@@ -263,6 +264,8 @@ AS_IF([test x$enable_tracker_backend = xyes], [
+                            $TRACKER_SPARQL_REQUIRED])
+ ])
+ 
++AS_IF([test x$enable_bluez_backend = xyes], [EBOOK_REQUIRED=$EBOOK_REQUIRED_FOR_BLUEZ])
++
+ AS_IF([test x$enable_eds_backend = xyes], [
+         PKG_CHECK_MODULES([EBOOK], [libebook-1.2 >= $EBOOK_REQUIRED
+                                     libebook-contacts-1.2 >= $EBOOK_REQUIRED])

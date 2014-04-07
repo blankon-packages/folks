@@ -1,3 +1,31 @@
+folks (0.9.6-3blankon1) tambora; urgency=low
+
+  * BUMP libebook1.2-dev (>= 3.12.0), libedataserver1.2-dev (>= 3.12.0), libebook-contacts1.2-dev (>= 3.12.0), (Valac => 0.23) 
+
+ -- Aan Yustian <aftian@localhost>  Mon, 07 Apr 2014 16:59:08 +0700
+
+folks (0.9.6-3) unstable; urgency=medium
+
+  * d/p/0001-backends-Fix-calls-to-ImDetails.normalise_im_address.patch:
+    + Patch from upstream, fix build with vala 0.24.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Fri, 04 Apr 2014 19:32:59 +0200
+
+folks (0.9.6-2) unstable; urgency=low
+
+  * Team upload
+  * Disable fatal deprecation warnings
+  * Add patch to reduce dependency on evolution-data-server: it's only
+    the BlueZ backend, which we don't compile, that needs a newer version
+    than 3.8.
+  * Pull in some patches from upstream that were applied in Ubuntu:
+    + fix display-names in the EDS persona store (GNOME #726787)
+    + fix unsetting favourite contacts (GNOME #724809)
+    + do not fix GNOME #724058 for now, it's new API and should
+      be received in an upstream release instead
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 26 Mar 2014 13:38:31 +0000
+
 folks (0.9.6-1blankon1) suroboyo; urgency=medium
 
   * New upstream release
