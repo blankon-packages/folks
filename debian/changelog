@@ -1,3 +1,9 @@
+folks (0.9.6-3+b1blankon1) tambora; urgency=low
+
+  * Sync version miss 
+
+ -- Rahman Yusri Aftian <aftian@localhost>  Thu, 08 May 2014 13:15:16 +0000
+
 folks (0.9.6-3blankon1) tambora; urgency=low
 
   * BUMP libebook1.2-dev (>= 3.12.0), libedataserver1.2-dev (>= 3.12.0), libebook-contacts1.2-dev (>= 3.12.0), (Valac => 0.23) 
