@@ -1,15 +1,60 @@
-folks (0.9.6-3+b1blankon1) tambora; urgency=low
+folks (0.10.0-1blankon1) tambora; urgency=medium
 
-  * Sync version miss 
-  * Drop Valac 0.23 to valac
+  * Rebuild 
 
- -- Rahman Yusri Aftian <aftian@localhost>  Thu, 08 May 2014 13:15:16 +0000
+ -- Mahyuddin <yudi.al@gmail.com>  Sat, 16 May 2015 18:25:15 +0700
 
-folks (0.9.6-3blankon1) tambora; urgency=low
+folks (0.10.0-1) unstable; urgency=medium
 
-  * BUMP libebook1.2-dev (>= 3.12.0), libedataserver1.2-dev (>= 3.12.0), libebook-contacts1.2-dev (>= 3.12.0), (Valac => 0.23) 
+  * New upstream version 0.10.0
+  * Split the dummy backend into a new libfolks-dummy25 package, having them
+    installed with libfolks25 caused it to always get loaded at runtime.
+    Thanks Ken VanDine. (Closes: #760404)
 
- -- Aan Yustian <yustian.aan@gmail.com>  Mon, 07 Apr 2014 16:59:08 +0700
+ -- Iain Lane <laney@debian.org>  Tue, 16 Sep 2014 13:11:13 +0100
+
+folks (0.9.8-1) unstable; urgency=medium
+
+  * New upstream version 0.9.8, fixing bugs-
+    + Fail to unprepare stores
+    + empathy and gnome contacts crash when bt phone available
+
+ -- Iain Lane <laney@debian.org>  Tue, 19 Aug 2014 11:49:07 +0100
+
+folks (0.9.7.1-1) unstable; urgency=medium
+
+  * New upstream version 0.9.7.1
+    + Fixes errors with the vala bindings.
+
+ -- Iain Lane <laney@debian.org>  Wed, 25 Jun 2014 10:44:38 +0100
+
+folks (0.9.7-1) unstable; urgency=medium
+
+  * New upstream release 0.9.7
+  * 0001-Reduce-libebook-dependency-when-not-compiling-the-Bl.patch
+    0002-Fixed-EDS-persona-store-display-name-value.patch
+    0003-Replaced-use-of-EVCard.remove_attribute-to-EVCard.re.patch
+    0004-backends-Fix-calls-to-ImDetails.normalise_im_address.patch
+    0005-core-Fix-FOLKS_DISABLE_LINKING.patch
+    0006-eds-Only-use-enabled-ESources-from-EDS.patch
+    0007-eds-Fix-crash-on-handling-invalid-birthday-dates-fro.patch
+    0008-telepathy-Fix-crash-on-handling-invalid-birthday-dat.patch
+    0009-tracker-Fix-crash-on-handling-invalid-birthday-dates.patch: Drop all
+    Debian patches which have been applied upstream in this release.
+  * Install the dummy backend.
+  * Adjust the symbols files for this release
+
+ -- Iain Lane <laney@debian.org>  Mon, 23 Jun 2014 12:44:09 +0100
+
+folks (0.9.6-4) unstable; urgency=medium
+
+  * Team upload
+  * Add patch from Ubuntu via upstream to fix FOLKS_DISABLE_LINKING
+  * Add patches from upstream to fix crashes on invalid birthday dates
+    (Closes: #744078)
+  * Add patch from upstream to avoid using disabled e-d-s ESources
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 14 May 2014 11:18:48 +0100
 
 folks (0.9.6-3) unstable; urgency=medium
 
@@ -32,12 +77,6 @@ folks (0.9.6-2) unstable; urgency=low
       be received in an upstream release instead
 
  -- Simon McVittie <smcv@debian.org>  Wed, 26 Mar 2014 13:38:31 +0000
-
-folks (0.9.6-1blankon1) suroboyo; urgency=medium
-
-  * New upstream release
-
- -- Mahyuddin Idram Ahmad <dotovr@di.blankon.in>  Sat, 11 Jan 2014 22:29:34 +0700
 
 folks (0.9.6-1) experimental; urgency=medium
 
@@ -63,6 +102,13 @@ folks (0.9.5-1) experimental; urgency=low
   * debian/libfolks25.symbols: Updated
 
  -- Sjoerd Simons <sjoerd@debian.org>  Sat, 26 Oct 2013 14:02:09 +0200
+
+folks (0.9.2-2) unstable; urgency=low
+
+  * Team upload.
+  * Upload to unstable.
+
+ -- Andreas Henriksson <andreas@fatal.se>  Tue, 17 Sep 2013 23:09:37 +0200
 
 folks (0.9.2-1) experimental; urgency=low
 

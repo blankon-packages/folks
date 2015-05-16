@@ -1,7 +1,6 @@
 Source: folks
 Priority: optional
-Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
-XSBC-original-Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth.debian.org>
+Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth.debian.org>
 Uploaders: Laurent Bigonville <bigon@debian.org>,
            Sjoerd Simons <sjoerd@debian.org>,
            Emilio Pozuelo Monfort <pochu@debian.org>
@@ -12,7 +11,7 @@ Build-Depends: debhelper (>= 9),
                libglib2.0-dev (>= 2.38.2),
                libtelepathy-glib-dev (>= 0.19),
                libdbus-glib-1-dev,
-               valac,
+               valac (>= 0.22),
                gobject-introspection (>= 1.31.0-2~),
                libgirepository1.0-dev (>= 1.30),
                gir1.2-telepathyglib-0.12,
@@ -20,9 +19,9 @@ Build-Depends: debhelper (>= 9),
                libxml2-dev,
                libncurses5-dev,
                libreadline6-dev,
-               libebook1.2-dev (>= 3.12.0),
-               libedataserver1.2-dev (>= 3.12.0),
-               libebook-contacts1.2-dev (>= 3.12.0),
+               libebook1.2-dev (>= 3.8),
+               libedataserver1.2-dev (>= 3.7.90),
+               libebook-contacts1.2-dev (>= 3.8),
                libzeitgeist-2.0-dev (>= 0.9.14)
 Standards-Version: 3.9.5
 Section: libs
@@ -159,6 +158,54 @@ Description: Evolution-data-server backend for libfolks - development files
  Facebook, etc.) to create metacontacts.
  .
  This package contains the development files for libfolks EDS backend.
+
+Package: libfolks-dummy25
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         libfolks25 (= ${binary:Version})
+Recommends: folks-common (= ${source:Version})
+Pre-Depends: ${misc:Pre-Depends}
+Breaks: libfolks25 (<< 0.10.0)
+Replaces: libfolks25 (<< 0.10.0)
+Multi-Arch: same
+Description: Dummy backend for libfolks
+ libfolks is a library that aggregates people from multiple sources
+ (eg, Telepathy connection managers and eventually evolution data server,
+ Facebook, etc.) to create metacontacts.
+ .
+ This package contains the dummy backend for libfolks
+
+Package: libfolks-dummy-dev
+Section: libdevel
+Architecture: any
+Depends: libfolks-eds25 (= ${binary:Version}),
+         libfolks-dev (= ${binary:Version}),
+         libglib2.0-dev (>= 2.24),
+         ${misc:Depends}
+Description: Dummy backend for libfolks - development files
+ libfolks is a library that aggregates people from multiple sources
+ (eg, Telepathy connection managers and eventually evolution data server,
+ Facebook, etc.) to create metacontacts.
+ .
+ This package contains the development files for libfolks dummy backend.
+
+Package: libfolks-dummy-dbg
+Section: debug
+Priority: extra
+Architecture: any
+Depends: libfolks-dummy25 (= ${binary:Version}),
+         libfolks-dbg (= ${binary:Version}),
+         ${misc:Depends}
+Breaks: libfolks-dbg (<< 0.10.0)
+Replaces: libfolks-dbg (<< 0.10.0)
+Multi-Arch: same
+Description: Dummy backend for libfolks - debugging symbols
+ libfolks is a library that aggregates people from multiple sources
+ (eg, Telepathy connection managers and eventually evolution data server,
+ Facebook, etc.) to create metacontacts.
+ .
+ This package contains the debugging symbols for libfolks dummy backend.
 
 Package: libfolks-eds-dbg
 Section: debug
